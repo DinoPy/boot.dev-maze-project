@@ -1,10 +1,10 @@
-from window import Window, Point, Cell, Maze
+from window import Window, Maze
 
 
 def main():
-    w = Window(800, 800)
-    maze = Maze(100, 100, 10, 10, 50, 50, w)
-    maze._animate()
+    w = Window(1000, 1000)
+    maze = Maze(50, 50, 12, 16, 50, 50, w)
+    maze.test()
 
     w.wait_for_close()
 
