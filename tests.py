@@ -8,8 +8,8 @@ class Test(unittest.TestCase):
         num_cols = 12
         num_rows = 10
         m1 = Maze(0, 0, num_rows, num_cols, 10, 10, win)
-        self.assertEqual(len(m1._cells), num_cols)
-        self.assertEqual(len(m1._cells[0]), num_rows)
+        self.assertEqual(len(m1._cells), num_rows)
+        self.assertEqual(len(m1._cells[0]), num_cols)
 
     def test_maze_exit_walls(self):
         win = Window(1000, 1000)
@@ -24,8 +24,8 @@ class Test(unittest.TestCase):
         m1 = Maze(100, 100, 10, 10, 50, 50, win)
         return
 
-        for i in range(self.num_cols):
-            for j in range(self.num_rows):
+        for i in range(self.num_rows):
+            for j in range(self.num_cols):
                 self.assertEqual(m1._cells[i][j].visited, False)
 
 
